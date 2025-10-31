@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 75%;
+    width: 45%;
+    border-top-right-radius: 33px;
+    border-bottom-right-radius: 33px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 4px 10px 0px rgba(0,0,0,0.2);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #64B5F6;
+    height: 75%;
+    width: 18%;
+    border-top-left-radius: 33px;
+    border-bottom-left-radius: 33px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 5px 4px 10px 0px rgba(0,0,0,0.2);
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 6%;
+    color: #64B5F6;
+    font-weight: bold;
+}
+
+.textInput {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    border: 0;
+    color: #9f9f9f;
+    padding-left: 6%;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    margin-bottom: 3%;
+}
+
+.textInput:focus {
+    outline:#64B5F6
+}
+
+.textInput::placeholder{
+    color: #9f9f9f;
+}
+
+.linha:focus-within {
+  border: 2px solid #64b5f6;
+}
+
+.cadButton {
+    background-color: #64B5F6;
+    width: 60%;
+    height: 10%;
+    border-radius: 15px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+a {
+    width: 60%;
+    height: 10%;
+    margin-top: 15%;
+}
+
+.logButton {
+    background-color: #64B5F6;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px white solid;
+    color: white;
+    font-weight: bold;
+}
