@@ -54,7 +54,7 @@
         $carrinhoStr = json_encode($carrinho);
 
         echo "<input type='hidden' name='carrinho' value='{$carrinhoStr}'>";
-        echo "<input type='hidden' name='user' value='{$_POST['user']}'>";
+
         ?>
     </form>
     <h3> Carrinho </h3>
@@ -78,7 +78,7 @@
 
         <?php
         echo "<input type='hidden' name='carrinho' value='{$carrinhoStr}'>";
-        echo "<input type='hidden' name='user' value='{$_POST['user']}'>";
+
         ?>
         <input type="hidden" name="acao" value="fazerPedido">
     </form>

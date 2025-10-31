@@ -9,12 +9,43 @@ function home(){
 }
 
 function criarProd(){
+    class Produto {
+        private $nome;
+        private $descricao;
+        private $preco;
+        private $categoria;
+
+        public function __construct($name, $desc, $preco, $categoria){
+            $this->nome = $name;
+            $this->descricao = $desc;
+            $this->preco = $preco;
+            $this->categoria = $categoria;
+        }
+
+        public function getNome(){
+            return $this->nome;
+        }
+
+        public function getDescricao(){
+            return $this->descricao;
+        }
+
+        public function getPreco(){
+            return $this->preco;
+        }
+
+        public function getCategoria(){
+            return $this->categoria;
+        }
+    }
     $nomeProduto = $_POST["nomeProduto"];
     $descProduto = $_POST["descProduto"];
     $precoProduto = $_POST["precoProduto"];
     $categoriaProduto = $_POST["categoria"];
 
-    criarProdutos($nomeProduto, $descProduto, $precoProduto, $categoriaProduto);
+    $produto = new Produto($nomeProduto, $descProduto, $precoProduto, $categoriaProduto);
+
+    criarProdutos($produto->getNome(), $produto->getDescricao(), $produto->getPreco(), $produto->getCategoria());
     
     header("Location: ./views/home/inicio.php?pagina=gerenciar_produtos");
 }
@@ -92,7 +123,7 @@ function deletarUser(){
 
 function fazerPedido(){
     $carrinho = json_decode($_POST["carrinho"], true);
-    $user = $_POST["user"];
+    $user = $_SESSION["user"];
 
     pedido($carrinho, $user);
 
