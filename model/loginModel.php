@@ -1,7 +1,6 @@
 <?php
 
 function loginUser($name, $senha){
-
     $sql = "SELECT * FROM tb_usuarios WHERE TB_USUARIOS_USERNAME = ? AND TB_USUARIOS_PASSWORD = ?";
     $conexao = conectarBanco();
     $stmt = $conexao->prepare($sql);
