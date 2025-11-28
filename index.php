@@ -1,8 +1,8 @@
 <?php
 
 require("controller/controller.php");
-require("controller/controllerProdutos.php");
-require("controller/controllerLogin.php");
+require("controller/produtosController.php");
+require("controller/loginController.php");
 
 $acao = isset($_POST["acao"]) ? $_POST["acao"] : "home";
 
