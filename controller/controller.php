@@ -8,62 +8,6 @@ function home(){
     header("Location: ./views/home/inicio.php");
 }
 
-function criarProd(){
-    class Produto {
-        private $nome;
-        private $descricao;
-        private $preco;
-        private $categoria;
-
-        public function __construct($name, $desc, $preco, $categoria){
-            $this->nome = $name;
-            $this->descricao = $desc;
-            $this->preco = $preco;
-            $this->categoria = $categoria;
-        }
-
-        public function getNome(){
-            return $this->nome;
-        }
-
-        public function getDescricao(){
-            return $this->descricao;
-        }
-
-        public function getPreco(){
-            return $this->preco;
-        }
-
-        public function getCategoria(){
-            return $this->categoria;
-        }
-    }
-    $nomeProduto = $_POST["nomeProduto"];
-    $descProduto = $_POST["descProduto"];
-    $precoProduto = $_POST["precoProduto"];
-    $categoriaProduto = $_POST["categoria"];
-
-    $produto = new Produto($nomeProduto, $descProduto, $precoProduto, $categoriaProduto);
-
-    criarProdutos($produto->getNome(), $produto->getDescricao(), $produto->getPreco(), $produto->getCategoria());
-    
-    header("Location: ./views/home/inicio.php?pagina=gerenciar_produtos");
-}
-
-function deleteProd(){
-    $produtoID = $_POST["produto"];
-
-    deleteProduto($produtoID);
-    
-    header("Location: ./views/home/inicio.php?pagina=gerenciar_produtos");
-}
-
-function editProd(){
-    editarProduto($_POST["nomeProduto"], $_POST["descProduto"], $_POST["precoProduto"], $_POST["produto"]);
-    
-    header("Location: ./views/home/inicio.php?pagina=gerenciar_produtos");
-}
-
 function criarCat(){
     $nomeCategoria = $_POST["nomeCategoria"];
     criarCategoria($nomeCategoria);

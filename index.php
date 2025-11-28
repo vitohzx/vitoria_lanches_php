@@ -1,6 +1,7 @@
 <?php
 
 require("controller/controller.php");
+require("controller/controllerProdutos.php");
 
 $acao = isset($_POST["acao"]) ? $_POST["acao"] : "home";
 

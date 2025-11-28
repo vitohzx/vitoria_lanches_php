@@ -89,7 +89,7 @@
     if (isset($_POST['produtos'])) {
         $produto = getProduto($_POST["produtos"]);
         echo "
-            <form action='../index.php' method='post' class='formStyle'>
+            <form action='../../index.php' method='post' class='formStyle'>
                 <div class='linha'>
                     <img src='../../images/user (3).png' alt='' style='width: 31px; height: 31px; margin-left: 5%'>
                     <input type='text' name='nomeProduto' id='' placeholder='NOME PRODUTO' required class='textInput' value='{$produto["TB_PRODUTO_NOME"]}'>
@@ -107,8 +107,8 @@
 
 
                 <input type='submit' value='EDITAR PRODUTO' class='cadProd' style='margin-left: 0'>
+                <input type='hidden' name='produto' value='{$_POST['produtos']}'>
                 <input type='hidden' name='acao' value='editProduto'>
-                <input type='hidden' name='user' value='{$_POST['user']}'>
             </form>
         ";
     }
