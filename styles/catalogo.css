@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse; /* Remove o espaço entre as bordas */
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+th, td {
+    padding: 12px 15px; /* Espaçamento interno das células */
+}
+thead tr {
+    background-color: #009879; /* Cor de fundo do cabeçalho */
+    color: #ffffff;
+    text-align: left;
+}
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Cor de fundo para linhas pares */
+}
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879; /* Borda na última linha */
+}

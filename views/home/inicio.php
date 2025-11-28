@@ -53,7 +53,7 @@
             </div>
             <div class='aba'>
                 <div class='icon'> <img src='../../images/prod.png' height='100%' width='100%'> </div>
-                <a href='#'>Produtos</a>
+                <a href='inicio.php?pagina=catalogo'>Produtos</a>
             </div>
             
             <?php
@@ -129,6 +129,10 @@
                     
                     case "fazer_pedido": 
                         include_once "../fazer_pedido/fazer_pedido.php";
+                        break;
+
+                    case "catalogo":
+                        include_once "../catalogo/catalogo.php";
                         break;
 
                     default: 

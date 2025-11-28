@@ -3,6 +3,9 @@
 require("controller/controller.php");
 require("controller/produtosController.php");
 require("controller/loginController.php");
+require("controller/categoriasController.php");
+require("controller/usuariosController.php");
+require("controller/pedidosController.php");
 
 $acao = isset($_POST["acao"]) ? $_POST["acao"] : "home";
 
