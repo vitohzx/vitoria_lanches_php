@@ -16,7 +16,7 @@ class ProdutosModel {
     }
 
     public function criarProduto(){
-        if ($id == "nulo") {
+        if ($this->id == "nulo") {
             return;
         }
         $sql = "INSERT INTO tb_produto (TB_PRODUTO_NOME, TB_PRODUTO_DESC, TB_PRODUTO_PRECO_UNIT, TB_TIPO_PRODUTO_ID) VALUES (?, ?, ?, ?)";

@@ -29,7 +29,7 @@
             <td>{$produto['TB_PRODUTO_NOME']}</td>
             <td>{$produto['TB_PRODUTO_DESC']}</td>
             <td>{$preco}</td>
-            <td>ana.silva@example.co</td>
+            <td>{$produto['TB_TIPO_PRODUTO_DESC']}</td>
         </tr>";
     }
     ?>

@@ -65,7 +65,7 @@ function getProduto($id){
 }
 
 function readProdutos(){
-    $sql = "SELECT * FROM tb_produto";       
+    $sql = "SELECT * FROM tb_produto INNER JOIN tb_tipo_produto ON tb_produto.tb_tipo_produto_id = tb_tipo_produto.tb_tipo_produto_id";       
     $conexao = conectarBanco();   
     $result = $conexao->query($sql);
     $produtos = [];
@@ -177,5 +177,3 @@ function getPedidoFormat(){
     }
     return $pdd;
 }
-
-?>
